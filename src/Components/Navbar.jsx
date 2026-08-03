@@ -3,20 +3,26 @@ import React from "react";
 const Navbar = () => {
   return (
     <>
-      <div className="flex justify-evenly items-center w-full h-auto">
-        <div className="">
-          <img src="./Logo.png" alt="" className="w-15" />
+      <nav className="fixed flex items-center justify-between px-6  w-full h-auto bg-[#1F150C]">
+        <div className="shrink-0">
+          <img
+            src={`${import.meta.env.BASE_URL}logo.png`}
+            alt="FastFood Logo"
+            className="h-16 w-auto"
+          />
         </div>
-        <div className="flex-col">
-          <li>
-            <ul>Home</ul>
-            <ul>Menu</ul>
-            <ul>Contacts</ul>
-            <ul></ul>
-            <ul></ul>
-          </li>
+        <ul className="hidden md:flex gap-6 text-white  text-base font-medium cursor-pointer">
+          <li className="hover:text-amber-900">Home</li>
+          <li className="hover:text-amber-900">Menu</li>
+          <li className="hover:text-amber-900">Locations</li>
+          <li className="hover:text-amber-900">About us</li>
+          <li className="hover:text-amber-900">Contact</li>
+        </ul>
+        <div>
+          <button>Login</button>
+          <button>Register</button>
         </div>
-      </div>
+      </nav>
     </>
   );
 };
