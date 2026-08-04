@@ -5,7 +5,9 @@ import { MdOutlineRestaurantMenu } from "react-icons/md";
 const HomePage = () => {
   return (
     <>
-      <div className="relative min-h-screen bg-[#1F150C]">
+      <div className="relative min-h-screen bg-gradient-to-b from-[#0A0A0A] to-[#2C1810] overflow-hidden">
+        <div className="absolute top-[-100px] right-[-100px] w-96 h-96 bg-amber-600/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-56 h-56 bg-amber-400/5 rounded-full blur-3xl pointer-events-none"></div>
         <div className="absolute z-20">
           <Navbar />
         </div>
