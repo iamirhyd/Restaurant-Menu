@@ -32,7 +32,7 @@ const HomePage = () => {
               </button>
             </div>
           </div>
-          <div className="flex justify-center items-center  w-full md:w-1/2">
+          <div className="flex justify-center items-center  w-full sm:p-5 md:w-1/2">
             <img
               src="/Burger.png"
               alt="Background"
