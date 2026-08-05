@@ -4,7 +4,7 @@ import HomePage from "./Page/HomePage";
 const App = () => {
   return (
     <>
-      <div className="text-indigo-600">
+      <div>
         <HomePage />
       </div>
     </>
