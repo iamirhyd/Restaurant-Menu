@@ -4,7 +4,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
     <>
-      <nav className="fixed grid grid-cols-3 items-center px-6 w-full h-auto bg-transparent">
+      <nav className=" sticky grid grid-cols-3 items-center px-6 w-full h-auto bg-transparent">
         <div className="justify-self-start">
           <img
             src={`${import.meta.env.BASE_URL}newlogo.png`}
