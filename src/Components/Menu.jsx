@@ -1,34 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Menu = () => {
+  const [selectItem, setSelectItem] = useState(null);
+  const Menu = ["BreakFast", "Launch", "Dinner", "Sides", "Dessert"];
   return (
-    <div className="bg-white min-h-screen w-full">
+    <div className="bg-white min-h-screen w-full overflow-x-auto whitespace-nowrap">
       <div>
         <ul className="gap-6 flex flex-row justify-evenly py-5 font-medium ">
-          <li className="hover:text-amber-600 group relative cursor-pointer">
-            Breakfast
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 rounded-md bg-amber-600 transition-all duration-300 group-hover:w-full"></span>
-          </li>
-          <li className="hover:text-amber-600 group relative cursor-pointer">
-            Launch
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 rounded-md bg-amber-600 transition-all duration-300 group-hover:w-full"></span>
-          </li>
-          <li className="hover:text-amber-600 group relative cursor-pointer">
-            Dinner
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 rounded-md bg-amber-600 transition-all duration-300 group-hover:w-full"></span>
-          </li>
-          <li className="hover:text-amber-600 group relative cursor-pointer">
-            Salads
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 rounded-md bg-amber-600 transition-all duration-300 group-hover:w-full"></span>
-          </li>
-          <li className="hover:text-amber-600 group relative cursor-pointer">
-            dessert
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 rounded-md bg-amber-600 transition-all duration-300 group-hover:w-full"></span>
-          </li>
-          <li className="hover:text-amber-600 group relative cursor-pointer">
-            Sides
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 rounded-md bg-amber-600 transition-all duration-300 group-hover:w-full"></span>
-          </li>
+          {Menu.map((MenuList, i) => (
+            <li
+              key={MenuList}
+              onClick={() => {
+                setSelectItem(i);
+              }}
+              className={`hover:text-amber-600 group relative cursor-pointer ${selectItem === i ? "text-amber-600" : null}`}
+            >
+              {MenuList}
+              <span
+                className={`absolute -bottom-1 left-0 w-0 h-0.5 rounded-md bg-amber-600 transition-all duration-300 group-hover:w-full ${selectItem === i ? "w-full" : null}`}
+              ></span>
+            </li>
+          ))}
         </ul>
       </div>
     </div>
