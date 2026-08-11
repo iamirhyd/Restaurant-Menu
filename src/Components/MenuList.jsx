@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const MenuList = () => {
   const [selectItem, setSelectItem] = useState(null);
-  const Menu = ["BreakFast", "Launch", "Dinner", "Sides", "Dessert"];
+  const Menu = ["All", "BreakFast", "Launch", "Dinner", "Sides", "Dessert"];
   const foodList = [
     {
       id: 1,
