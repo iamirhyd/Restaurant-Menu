@@ -26,7 +26,7 @@ const LandingPage = () => {
       </div>
       <div className="flex justify-center items-center  w-full mt-20 md:w-1/2">
         <img
-          src="/Burger.png"
+          src={`${import.meta.env.BASE_URL}Burger.png`}
           alt="Background"
           className="w-full max-w-md md:max-w-lg"
         />

@@ -116,7 +116,7 @@ const MenuList = () => {
             key={foodItems.id}
           >
             <img
-              src={foodItems.image}
+              src={`${import.meta.env.BASE_URL}${foodItems.image}`}
               alt={foodItems.name}
               className="h-48 w-full object-cover "
             />

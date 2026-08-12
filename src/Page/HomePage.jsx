@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../Components/Navbar";
 import LandingPage from "../Components/LandingPage";
 import Menu from "../Components/Menu";
+import Footer from "../Components/Footer";
 const HomePage = () => {
   return (
     <>
@@ -19,6 +20,9 @@ const HomePage = () => {
         <div className="w-full h-4 bg-amber-600/70"></div>
         <div>
           <Menu />
+        </div>
+        <div>
+          <Footer />
         </div>
       </div>
     </>
