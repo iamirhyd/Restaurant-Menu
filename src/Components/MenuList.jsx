@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const MenuList = () => {
   const [selectItem, setSelectItem] = useState(null);
-  const Menu = ["All", "BreakFast", "Launch", "Dinner", "Sides", "Dessert"];
+  const Menu = ["All", "BreakFast", "Lunch", "Dinner", "Sides", "Dessert"];
   const foodList = [
     {
       id: 1,
@@ -84,6 +84,10 @@ const MenuList = () => {
       image: "./MenuPreview.png",
     },
   ];
+  const filteredFood =
+    selectItem === null || selectItem === 0
+      ? foodList
+      : foodList.filter((item) => item.category === Menu[selectItem]);
   return (
     <>
       <div className="overflow-x-auto whitespace-nowrap">
@@ -106,9 +110,9 @@ const MenuList = () => {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 px-4 ">
         {/* Grid */}
-        {foodList.map((foodItems) => (
+        {filteredFood.map((foodItems) => (
           <div
-            className="bg-gray-100 rounded-md shadow-md flex-col flex h-auto "
+            className="bg-gray-100 rounded-md shadow-md flex-col flex h-full "
             key={foodItems.id}
           >
             <img
@@ -120,7 +124,7 @@ const MenuList = () => {
               <h3 className="font-bold text-lg text-gray-800">
                 {foodItems.name}
               </h3>
-              <p className="text-sm text-gray-600 flex-1 h-24 overflow-hidden w-full h-auto line-clamp-2">
+              <p className="text-sm text-gray-600 flex-1 h-24 overflow-hidden w-full line-clamp-2">
                 {foodItems.description}
               </p>
             </div>
