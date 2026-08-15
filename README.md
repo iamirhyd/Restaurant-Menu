@@ -1,16 +1,38 @@
-# React + Vite
+<div align="center">
+  <h1>🍽️ Restaurant Menu / منوی رستوران</h1>
+  
+  <div>
+    <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+    <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
+    <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
+  </div>
+</div>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## ✨ Features / قابلیت‌های کلیدی
 
-Currently, two official plugins are available:
+📋 **Display menu items** / نمایش لیست غذاها در قالب کارت‌های گریدی  
+🔍 **Category filter** / فیلتر بر اساس دسته‌بندی (All, Breakfast, Lunch, Dinner, Sides, Dessert)  
+📱 **Fully responsive** / طراحی کاملاً پاسخگو (1-3-6 ستون)  
+🎨 **Animated menu tabs** / تب‌های منو با انیمیشن خط زیرین  
+🌙 **Dark & warm theme** / تم تیره و گرم با هایلایت امبر  
+🔄 **Smooth scrolling** / اسکرول نرم بین بخش‌های صفحه با React Scroll
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 📸 Preview / پیش‌نمایش
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+<div align="center">
+  <img src="./public/Preview.png" alt="Restaurant Menu Preview" width="800" />
+</div>
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Technologies / فناوری‌های به‌کاررفته
+
+⚛️ **React 18** - Core library / کتابخانه اصلی  
+🎨 **TailwindCSS** - Styling / استایل‌دهی  
+⚡ **Vite** - Build tool / ابزار ساخت سریع  
+📦 **JavaScript (ES6+)** - Application logic / منطق برنامه  
+🔄 **React Scroll** - Smooth scrolling / اسکرول نرم بین بخش‌ها
+
+---
