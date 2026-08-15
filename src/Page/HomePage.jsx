@@ -3,6 +3,7 @@ import Navbar from "../Components/Navbar";
 import LandingPage from "../Components/LandingPage";
 import Menu from "../Components/Menu";
 import Footer from "../Components/Footer";
+import { Element } from "react-scroll";
 const HomePage = () => {
   return (
     <>
@@ -14,13 +15,17 @@ const HomePage = () => {
         <div>
           <Navbar />
         </div>
-        <div>
-          <LandingPage />
-        </div>
+        <Element name="Home">
+          <div>
+            <LandingPage />
+          </div>
+        </Element>
         <div className="w-full h-4 bg-amber-600/70"></div>
-        <div>
-          <Menu />
-        </div>
+        <Element name="Menu">
+          <div className="mb-10 pb-5 bg-white">
+            <Menu />
+          </div>
+        </Element>
         <div>
           <Footer />
         </div>

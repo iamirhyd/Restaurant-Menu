@@ -1,6 +1,6 @@
 import React from "react";
 import { MdOutlineRestaurantMenu } from "react-icons/md";
-
+import { Link } from "react-scroll";
 const LandingPage = () => {
   return (
     <div className="flex flex-col md:flex-row min-h-screen items-center ">
@@ -15,13 +15,15 @@ const LandingPage = () => {
           Unhealthy? Absolutely. Delicious? Definitely.
         </p>
         <div className="mt-4 flex items-center md:items-start ">
-          <button
-            className=" 
-              flex items-center gap-2 px-6 py-3 bg-amber-600 hover:bg-amber-700 rounded-md
-              transition-colors cursor-pointer shadow-md "
-          >
-            <MdOutlineRestaurantMenu /> Check out the Menu!
-          </button>
+          <Link to="Menu" smooth="True" duration={500}>
+            <button
+              className=" 
+            flex items-center gap-2 px-6 py-3 bg-amber-600 hover:bg-amber-700 rounded-md
+            transition-colors cursor-pointer shadow-md "
+            >
+              <MdOutlineRestaurantMenu /> Check out the Menu!
+            </button>
+          </Link>
         </div>
       </div>
       <div className="flex justify-center items-center  w-full mt-20 md:w-1/2">

@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { Link } from "react-scroll";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
@@ -14,8 +14,12 @@ const Navbar = () => {
         </div>
         <div className="justify-self-center">
           <ul className="hidden md:flex gap-6 text-white text-base font-medium cursor-pointer">
-            <li className="hover:text-amber-600">Home</li>
-            <li className="hover:text-amber-600">Menu</li>
+            <Link to="Home" smooth="true" duration={500}>
+              <li className="hover:text-amber-600">Home</li>
+            </Link>
+            <Link to="Menu" smooth="true" duration={500}>
+              <li className="hover:text-amber-600">Menu</li>
+            </Link>
             <li className="hover:text-amber-600">Locations</li>
             <li className="hover:text-amber-600">Contact</li>
           </ul>
@@ -49,8 +53,12 @@ const Navbar = () => {
         {open && (
           <div className="absolute top-16 left-1/2 -translate-x-1/2 w-[90%] rounded-2xl bg-amber-600/40 backdrop-blur-lg border border-white/15 p-6 md:hidden">
             <ul className="flex flex-col gap-4 text-white text-center">
-              <li className="hover:text-amber-600">Home</li>
-              <li className="hover:text-amber-600">Menu</li>
+              <Link to="Home" smooth="true" duration={500}>
+                <li className="hover:text-amber-600">Home</li>
+              </Link>
+              <Link to="Menu" smooth="true" duration={500}>
+                <li className="hover:text-amber-600">Menu</li>
+              </Link>
               <li className="hover:text-amber-600">Locations</li>
               <li className="hover:text-amber-600">Contact</li>
             </ul>

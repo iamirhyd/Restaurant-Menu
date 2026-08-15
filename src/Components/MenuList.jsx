@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const MenuList = () => {
-  const [selectItem, setSelectItem] = useState(null);
+  const [selectItem, setSelectItem] = useState(0);
   const Menu = ["All", "BreakFast", "Lunch", "Dinner", "Sides", "Dessert"];
   const foodList = [
     {
@@ -118,7 +118,7 @@ const MenuList = () => {
             <img
               src={`${import.meta.env.BASE_URL}${foodItems.image}`}
               alt={foodItems.name}
-              className="h-48 w-full object-cover "
+              className="h-80 md:h-48 w-full object-cover "
             />
             <div className="p-4 flex-col flex gap-1">
               <h3 className="font-bold text-lg text-gray-800">
